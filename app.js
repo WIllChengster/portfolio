@@ -9,10 +9,10 @@ app.get('/', (req, res) => {
     res.sendFile('./index.html')
 })
 
-app.use(express.static(path.join(__dirname + '/Memory-Match')));
+app.use(express.static(path.join(__dirname + '/mm')));
 
 app.get('/memory_match', (req, res) => {
-    res.sendFile(__dirname + '/Memory-Match/index.html')
+    res.sendFile(__dirname + '/mm/index.html')
 } )
 
 app.listen(PORT, () => {

@@ -1,0 +1,102 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Memory Match Game!</title>
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet">
+        <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="style.css">
+
+        <!--<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>-->
+        <script src="main.js"></script>
+    </head>
+
+    <body>
+    <div class="background"></div>
+
+    <header>
+        <img src="../images/lol_anime.svg">
+        <h1>Memory Match!</h1>
+
+        <h3 onclick="$('#settings').modal('toggle')">Settings</h3>
+
+        <h3 onclick="$('#aboutMe').modal('toggle')">About me</h3>
+    </header>
+
+    <div class="container" id="stats">
+        <div class="games-played">
+            <div class="statlabel">Games Played</div>
+            <div class="value"></div>
+        </div>
+        <div class="attempts">
+            <div class="statlabel">attempts</div>
+            <div class="value"></div>
+        </div>
+        <div class="accuracy">
+            <div class="statlabel">Accuracy</div>
+            <div class="value"></div>
+        </div>
+        <button type="button" class="reset btn btn-primary btn-lg">Reset Game</button>
+    </div>
+    <section id="game-area">
+
+    </section>
+
+    <div id="videoContainer">
+        <iframe src="https://www.youtube.com/embed/mAH7CLUmvhE?autoplay=1&controls=0&showinfo=0"></iframe>
+    </div>
+
+    <div class="modal fade" id="aboutMe" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-center" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="aboutMeModal">About Me</h5>
+                </div>
+                <div class="modal-body">
+                    <img id="me" src="../images/me.jpg">
+                    <a href="#"></a>
+                    <p> My name is William Cheng. This
+                    </p>
+                    <p>
+                        Created in early February 2018This game is a memory matching game based off of my favorite TV series.
+                    </p>
+                    <p>
+                        I used HTML, CSS, Javascript, Jquery, and Bootstrap to create this game.
+                    </p>
+                    <p>
+                        The purpose of this game is to strengthen my logistical skills using backend coding <br>
+                        and explore styling capabilities using frontend technologies.
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="settings" tabindex="-2" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-center" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="settingsModal">Settings</h5>
+                </div>
+                <div class="modal-body">
+                    <h2>CardBacks</h2>
+                    <input  onchange = 'yugioh()' type="radio" class="radios" name="cardback" id="pokemonBack" checked> Yu Gi Oh Card Back
+                    <input  onchange='pokemon()' type="radio" class="radios" name="cardback" id="pokemonBack"> pokemon Card Back
+                    <input onchange="redBicycle()" type="radio" class="radios" name="cardback"  id="redBack"> Red playing Card Back
+                    <input onchange="blueBicycle()" type="radio" class="radios" name="cardback"  id="blueBack"> Blue playing Card Back
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    </body>
+
+</html>
